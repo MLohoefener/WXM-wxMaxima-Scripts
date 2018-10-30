@@ -1,0 +1,32 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 15.08.2 ] */
+
+/* [wxMaxima: input   start ] */
+g1:U_R(t)=-R*I_C(t);
+g2:U_L(t)=-L*diff(I_C(t),t);
+g3:I_C(t)=C*diff(U_C(t),t);
+g4:U_L(t)+U_R(t)=U_C(t);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+g4;
+solve(g4,U_R(t));
+g5:ev(g1,%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve(g5,U_L(t));
+g6:ev(g2,%);
+g7:ev(g3,%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+dgl:ev(g6,g7);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+lhs(dgl)-rhs(dgl)=0;
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

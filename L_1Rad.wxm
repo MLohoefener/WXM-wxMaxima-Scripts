@@ -1,0 +1,25 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 16.12.2 ] */
+
+/* [wxMaxima: input   start ] */
+L:m_A*diff(x_A(t),t)^2/2+m_R*diff(x_R(t),t)^2/2-k_A*(x_R(t)-x_A(t))^2/2-k_R*(x_S(t)-x_R(t))^2/2;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(diff(L,diff(x_A(t),t)),t)-diff(L,x_A(t))=0;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve([%], [diff(x_A(t),t,2)]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diff(diff(L,diff(x_R(t),t)),t)-diff(L,x_R(t))=0;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+solve([%], [diff(x_R(t),t,2)]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

@@ -1,6 +1,6 @@
 # WXM-wxMaxima-Scripts
 
-Examples for wxMaxima https://wxmaxima-developers.github.io/wxmaxima/
+## Examples for wxMaxima https://wxmaxima-developers.github.io/wxmaxima/
 
 DC-mot-tf.wxm Transfer functions of a DC motor  
 L-neu.wxm     Lagrange description of a pipe pendulum with a mass inside  
